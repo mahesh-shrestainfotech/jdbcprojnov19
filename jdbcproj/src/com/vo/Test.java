@@ -61,6 +61,8 @@ public class Test {
 		
 		try {
 			
+			Class.forName("com.mysql.jdbc.Driver");
+			
 			Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root","root");
 			
 			PreparedStatement preparedStatement = connection.prepareStatement(selectQuery);
